@@ -1,0 +1,11 @@
+#!/bin/bash
+
+site=$1
+
+for i in $(grep -ER '/~?kal/' $site | grep -v '^Binary' | cut -d: -f1 | sort | uniq)
+do 
+  sed -e "s/kal/$LOGNAME/g" $i > .temp_file
+  mv .temp_file $i
+  chmod 660 $i
+  chgrp apache $i
+done

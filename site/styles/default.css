@@ -1,0 +1,26 @@
+@charset "ISO-8859-1";
+body {
+  margin: 0em 0em 0em 0em;
+  padding: 0em 0em 0em 0em;
+  color: black;
+  background: #efffef;
+  font-family: Arial, sans-serif;
+}
+
+img {
+  border: 0px;
+}
+
+a:link { color: navy; }
+a:visited { color: teal; }
+a:hover {
+  color: maroon;
+  background-color: #ffffaa;
+  text-decoration: none;
+}
+a:active { color: red; }
+
+.hide {
+  display: none
+}
+

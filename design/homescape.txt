@@ -1,0 +1,129 @@
+homescapedesign.com - The Plan (r) v 0.1
+
+1. Database Design
+
+
+2. Web Presentation
+
+ * site will forward to a site_down page during maintenance
+ * front page will display a date
+
+
+3. Administrative Functions
+
+ * Add Project
+  - create project structure on the disk
+  - create project structure in the DB
+  - project needs to have:
+   + project name (internal only)
+   + category
+   + site/location (detail needs to determined, might need to show a list of previously entered site/location)
+   + title (optional)
+   + description
+   + keywords
+  - forwards to Edit Project when done
+
+ 
+ * Edit Project
+  - graphically show the different layouts available for project detail
+
+  - go through each picture in /incoming directory and add description (optional) and keywords
+
+  - option to insert items (for example, text item only with no images) Items need to have type indicators
+  - option to change items
+  - option to delete items
+
+  - option to reference an already added picture/description combo
+
+  - offer a way to sort the order of the pictures
+
+  - option to create a <more_picture> link at the bottom for standalone gallery
+
+ 
+ * Delete Project
+  - confirmation
+  - delete and backup from database
+  - delete and backup/tar from directory
+
+
+ * Brief screen layout
+  - graphically show the different layouts available for brief screens
+  - option to set layout for categories
+
+
+ * Contact Us form management
+  - view name/email address/subject/message
+  - delete name/email address/subject/message
+
+
+4. Data Recovery/Backup
+
+
+5. Batch Jobs
+  - logrotate
+  - banner rotate
+  - featured projects
+
+
+6. Directory Layout
+
+   $HOME/homescape/incoming/
+        /homescape/images/
+        /public_html/homescape/
+        /public_html/homescape/smarty/
+        /public_html/homescape/templates/
+        /public_html/homescape/templates_c/
+        /public_html/homescape/configs/
+        /public_html/homescape/cache/
+
+
+7. Site map/search 
+
+ * full text search on project descriptions
+ * keyword search on projects
+ * full text search on image descriptions
+ * keyword search on images
+ * predefined search on images based on keywords or any properties
+
+8. Reference/Partner
+
+ * Testamonials
+ * Links
+ 
+
+-------------------------------------------------------------------------------------
+
+featured_projects
+
+projects
+
+pages: (managable in admin mode)
+ - attributes:
+  + page name (set in the php file)
+  + logo
+  + slide show area content
+
+contacts
+ - people sending feedback/questions
+  + name
+  + email
+  + subject
+  + message
+
+references
+ - references for previous work (possibly with a picture)
+  + name
+  + address
+  + phone
+
+links
+
+items
+ - attributes:
+  + description
+
+images
+ - attributes:
+  + caption
+  + url (this will based on a base url or it can be an absolute url)
+
